@@ -1,42 +1,24 @@
 import React from "react";
-import { useState, useEffect } from "react";
-
+import { useState } from "react";
+import GetId from './../Services/Service.jsx'
 
 function App() {
 
-  const [error, setError] = useState(null);
-  const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
 
-
-
-  useEffect(() => {
-    fetch("http://localhost:3000/items")
-      .then(res => res.json())
-      .then(
-        (result) => {
-          setIsLoaded(true);
-          setItems(result);
-        },
-        // Примечание: важно обрабатывать ошибки именно здесь, а не в блоке catch(),
-        // чтобы не перехватывать исключения из ошибок в самих компонентах.
-        (error) => {
-          setIsLoaded(true);
-          setError(error);
-        }
-      )
-  }, [])
 
   return (
     <div>
       {items.map(it => {
         return (
-          <div>
+          <div key={it.id}>
             <h1>{it.name}</h1>
-          </div>
-        )
+          </div>)
       })}
 
+
+      {/* Не задействуется в отображении */}
+      < GetId setItems={setItems} />
     </div>
   );
 }
