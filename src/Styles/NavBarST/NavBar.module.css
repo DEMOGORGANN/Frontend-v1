@@ -1,0 +1,21 @@
+.wrapNavBar {
+  border: solid 2px #675af7;
+  background-color: rgba(247, 239, 239, 0.897);
+  border-radius: 5px;
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  font-weight: 700;
+}
+
+.wrapNavBar a {
+  text-decoration: none;
+  margin: 20px;
+  color: black;
+  font-size: 20px;
+}
+/*# sourceMappingURL=NavBar.module.css.map */
