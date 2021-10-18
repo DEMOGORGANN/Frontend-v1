@@ -3,16 +3,17 @@
   background-color: rgba(247, 239, 239, 0.897);
   border-radius: 5px;
   margin-top: 20px;
+  font-weight: 700;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-  font-weight: 700;
 }
 
-.wrapNavBar a {
+.wrapNavBar .wrapA {
+  margin: 20px 20px 20px auto;
+}
+
+.wrapNavBar .wrapA a {
   text-decoration: none;
   margin: 20px;
   color: black;
