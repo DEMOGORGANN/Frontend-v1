@@ -1,25 +1,21 @@
 import React from "react";
 import {
-    BrowserRouter as Router,
     Link
 } from "react-router-dom";
 
-
 import styles from './../Styles/NavBarST/NavBar.module.css'
 
-function NavBar() {
+function NavBar({ auth, clSBM }) {
 
 
     return (
-        <Router>
-            <div className={styles.wrapNavBar}>
-                <div className={styles.wrapA}>
-                    <Link to="/">#</Link>
-                    <Link to="/blog">Записи</Link>
-                    <Link to="/logIn">Вход</Link>
-                </div>
+        <div className={styles.wrapNavBar}>
+            <div className={styles.wrapA}>
+                <Link to="/">Главная</Link>
+                <Link to="/blog">Записи</Link>
+                {auth ? <Link to="logIn" onClick={clSBM}>Выход</Link> : <Link to="/logIn">Вход</Link>}
             </div>
-        </Router>
+        </div>
     );
 }
 
