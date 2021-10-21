@@ -1,12 +1,11 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   BrowserRouter,
   Switch,
   Route,
   Redirect
 } from "react-router-dom";
-import GetId from './../Services/Service.jsx'
 import NavBar from "./NavBar.jsx";
 import LogIn from "./LogIn.jsx";
 import BlogPage from "./BlogPage.jsx";
@@ -23,11 +22,34 @@ function App() {
 
   const valueLS = (localStorage.getItem('auth') === "true")
   const [items, setItems] = useState([]);
+  const [UserDB, setUser] = useState([]);
   const [auth, setState] = useState(valueLS || false)
 
 
+  useEffect(() => {
+    if (auth) {
+      fetch("http://localhost:3000/items")
+        .then(res => res.json())
+        .then(
+          (result) => {
+            setItems(result);
+          }
+        )
+    } else {
+      fetch("http://localhost:3000/Users")
+        .then(res => res.json())
+        .then(
+          (result) => {
+            setUser(result);
+          }
+        )
+    }
+
+
+  })
+
+
   function clSBM(e) {
-    e.preventDefault();
     if (auth === false) {
       setState(true)
       localStorage.setItem('auth', true)
@@ -62,20 +84,15 @@ function App() {
 
           {!auth ?
             <Route exact path="/logIn">
-              <LogIn clSBM={clSBM} />
+              <LogIn clSBM={clSBM} UserDB={UserDB} />
             </Route> : null}
 
           <Redirect to="/" />
         </Switch>
       </div>
 
-
-      {/* Не задействуется в отображении */}
-      < GetId setItems={setItems} />
-
     </BrowserRouter >
   );
 }
 
 export default App;
-

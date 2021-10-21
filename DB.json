@@ -14,24 +14,33 @@
             "id": 3,
             "name": "Долбоебики",
             "price": "$5"
-        }
-        ,
+        },
         {
             "id": 4,
             "name": "Долбоебики",
             "price": "$5"
-        }
-        ,
+        },
         {
             "id": 5,
             "name": "Долбоебики",
             "price": "$5"
-        }
-        ,
+        },
         {
             "id": 6,
             "name": "Долбоебики",
             "price": "$5"
+        }
+    ],
+    "Users": [
+        {
+            "id": 1,
+            "login": "Dmitriy",
+            "password": "123r"
+        },
+        {
+            "id": 2,
+            "login": "Dmitriy2",
+            "password": "123rr"
         }
     ]
 }
