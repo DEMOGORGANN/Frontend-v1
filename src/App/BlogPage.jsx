@@ -1,12 +1,15 @@
 import React from "react";
+import AddItems from "./AddItems";
 
-// import styles from './../Styles/NavBarST/NavBar.module.css'
+
+import styles from './../Styles/BlogPageST/BlogPage.module.css'
 
 function BlogPage({ items }) {
 
 
     return (
-        <div>
+        <div className={styles.wrapBlogPage}>
+            <AddItems />
             {items.map(it => {
                 return (
                     <div key={it.id}>

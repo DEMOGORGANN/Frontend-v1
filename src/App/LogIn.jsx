@@ -25,9 +25,9 @@ function LogIn({ clSBM, UserDB }) {
         <div className={styles.formLog}>
             <form>
                 <label >Логин</label>
-                <input type="text" id="fname" name="firstname" placeholder="Your login.." onChange={(e) => setLogin(e.target.value)} />
+                <input type="text" id="Login" placeholder="Your login.." onChange={(e) => setLogin(e.target.value)} />
                 <label >Пароль</label>
-                <input type="text" id="lname" name="lastname" placeholder="Your password.." onChange={(e) => setPassw(e.target.value)} />
+                <input type="text" id="Passw" placeholder="Your password.." onChange={(e) => setPassw(e.target.value)} />
                 <input type="submit" value="Войти" onClick={LogIns} />
             </form>
         </div>
