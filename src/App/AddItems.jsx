@@ -11,7 +11,7 @@ function AddItems({ items }) {
     async function setItem(e) {
         e.preventDefault();
         if (themeMes !== null && themeMes !== "" && themeMes !== undefined && Message !== null && Message !== "" && Message !== undefined) {
-            const newArr = { id: themeMes + "1", Theme: themeMes, Message: Message }
+            const newArr = { id: Math.random() * 100, Theme: themeMes, Message: Message }
             try {
                 const response = await fetch("http://localhost:3000/items", {
                     method: "POST",
@@ -22,11 +22,16 @@ function AddItems({ items }) {
                 });
                 const json = await response.json();
                 console.log('Успех:', JSON.stringify(json));
-                document.getElementById('them').value = "";
-                document.getElementById('mes').value = "";
+
             }
             catch (error) {
                 console.error('Ошибка:', error);
+            }
+            finally {
+                document.getElementById('them').value = "";
+                document.getElementById('mes').value = "";
+                setTheme('');
+                setMes('');
             }
         }
     }

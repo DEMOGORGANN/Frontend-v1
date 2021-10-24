@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom"
-// import styles from './../Styles/NavBarST/NavBar.module.css'
+
+
+import styles from './../Styles/NoAuthST/NoAuth.module.css'
 
 function NoAuth() {
     return (
-        <div>
+        <div className={styles.wrapNoAuth}>
             <span>Упс, необходимо войти</span>
             <Link to="logIn">Вход</Link>
         </div>

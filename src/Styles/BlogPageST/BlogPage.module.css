@@ -4,4 +4,19 @@
   border-radius: 5px;
   margin-top: 20px;
 }
+
+.wrapBlogPage .wrapOneMes {
+  margin: 10px 15px 0px 15px;
+}
+
+.wrapBlogPage .wrapOneMes h1 {
+  font-weight: 700;
+  font-size: 30px;
+  text-decoration: underline;
+}
+
+.wrapBlogPage .wrapOneMes h2 {
+  font-weight: 400;
+  font-size: 22px;
+}
 /*# sourceMappingURL=BlogPage.module.css.map */

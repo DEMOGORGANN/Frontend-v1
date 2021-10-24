@@ -1,0 +1,24 @@
+.wrapNoAuth {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  max-width: 100%;
+  border: solid 2px #675af7;
+  background-color: rgba(247, 239, 239, 0.897);
+  border-radius: 5px;
+  padding: 50px;
+}
+
+.wrapNoAuth a {
+  text-decoration: none;
+  color: red;
+  margin-top: 10px;
+  font-size: 25px;
+}
+/*# sourceMappingURL=NoAuth.module.css.map */

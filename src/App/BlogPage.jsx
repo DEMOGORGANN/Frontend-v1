@@ -10,10 +10,11 @@ function BlogPage({ items }) {
     return (
         <div className={styles.wrapBlogPage}>
             <AddItems items={items} />
-            {items.map(it => {
+            {items.map((it, i) => {
                 return (
-                    <div key={it.id}>
-                        <h1>{it.Theme}</h1>
+                    <div key={it.id} className={styles.wrapOneMes}>
+                        <h1>{i + 1}){it.Theme}</h1>
+                        <h2>{it.Message}</h2>
                     </div>)
             })}
         </div>
