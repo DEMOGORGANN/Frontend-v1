@@ -9,11 +9,11 @@ function BlogPage({ items }) {
 
     return (
         <div className={styles.wrapBlogPage}>
-            <AddItems />
+            <AddItems items={items} />
             {items.map(it => {
                 return (
                     <div key={it.id}>
-                        <h1>{it.name}</h1>
+                        <h1>{it.Theme}</h1>
                     </div>)
             })}
         </div>
